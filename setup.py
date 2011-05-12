@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name="django-cron",
-           version="0.1",
+           version="0.1.1",
            description="Django application automating tasks.",
            author="Reavis Sutphin-Gray",
            author_email="reavis-django-cron@sutphin-gray.com",
