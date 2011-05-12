@@ -20,13 +20,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 """
-from threading import Timer
+#from threading import Timer
 
 from django.conf import settings
 
 from base import Job, cronScheduler
 
-polling_frequency = getattr(settings, "CRON_POLLING_FREQUENCY", 300)
+#polling_frequency = getattr(settings, "CRON_POLLING_FREQUENCY", 300)
 
 def autodiscover():
 	"""
@@ -66,4 +66,4 @@ def autodiscover():
 		__import__("%s.cron" % app)
 		
 	# Step 4: once we find all the cron jobs, start the cronScheduler
-	Timer(polling_frequency, cronScheduler.execute).start()
+	#Timer(polling_frequency, cronScheduler.execute).start()

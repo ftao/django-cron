@@ -37,3 +37,4 @@ class Job(models.Model):
 
 class Cron(models.Model):
     executing = models.BooleanField(default=False)
+    last_run = models.DateTimeField(default=datetime.now())
